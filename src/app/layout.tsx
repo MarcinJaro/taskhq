@@ -18,6 +18,9 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "TaskHQ - Kanban Board",
   description: "Project and task management kanban board",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
