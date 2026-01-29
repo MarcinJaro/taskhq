@@ -123,3 +123,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Smooth transitions for mobile swipe feel */
+@media (max-width: 768px) {
+  .touch-pan-x {
+    touch-action: pan-x;
+  }
+}

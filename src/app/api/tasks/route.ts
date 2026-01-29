@@ -13,7 +13,7 @@ function getClient() {
 export async function GET() {
   try {
     const client = getClient();
-    const tasks = await client.query(api.tasks.list);
+    const tasks = await client.query(api.tasks.list, {});
     return NextResponse.json(tasks);
   } catch (error) {
     return NextResponse.json(

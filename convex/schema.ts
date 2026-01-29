@@ -29,5 +29,11 @@ export default defineSchema({
     order: v.number(),
     createdAt: v.number(),
     updatedAt: v.number(),
-  }).index("by_status", ["status", "order"]),
+    // Auto-archive: when task was marked done (for 7-day auto-hide)
+    doneAt: v.optional(v.number()),
+    // Manual archive flag
+    archived: v.optional(v.boolean()),
+  })
+    .index("by_status", ["status", "order"])
+    .index("by_archived", ["archived"]),
 });
